@@ -1,0 +1,14 @@
+share/locale/en/LC_MESSAGES/yass.mo
+share/locale/zh_CN/LC_MESSAGES/yass.mo
+bin/yass
+share/applications/it.gui.yass.desktop
+share/pixmaps/yass.png
+share/icons/hicolor/16x16/apps/yass.png
+share/icons/hicolor/22x22/apps/yass.png
+share/icons/hicolor/24x24/apps/yass.png
+share/icons/hicolor/32x32/apps/yass.png
+share/icons/hicolor/48x48/apps/yass.png
+share/icons/hicolor/128x128/apps/yass.png
+share/icons/hicolor/256x256/apps/yass.png
+share/icons/hicolor/512x512/apps/yass.png
+share/doc/yass/LICENSE
