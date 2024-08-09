@@ -1,13 +1,11 @@
 PORTNAME=	yass
-PORTVERSION=	1.11.2
+PORTVERSION=	1.12.3
 CATEGORIES=	net
 
 MAINTAINER=	keeyou-cn@outlook.com
 COMMENT=	Lightweight and Secure http/socks4/socks5 Proxy
 WWW=		https://github.com/Chilledheart/yass
 MASTER_SITES=	https://github.com/Chilledheart/yass/releases/download/${PORTVERSION}/
-PATCH_SITES=	https://github.com/Chilledheart/yass/commit/
-PATCHFILES=	8c9e581a410ad4a0114968dc047e1b6434dd4aa3.patch:-p1
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -41,7 +39,6 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/etc
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=off
 CMAKE_ARGS+=	-DUSE_BUILTIN_CA_BUNDLE_CRT=off
 CMAKE_ARGS+=	-DUSE_LIBCXX=off
-CMAKE_ARGS+=	-DENABLE_GOLD=off
 CMAKE_ARGS+=	-DSERVER=off
 CMAKE_ARGS+=	-DUSE_TCMALLOC=off
 CMAKE_ARGS+=	-DUSE_MIMALLOC=off
@@ -71,6 +68,7 @@ LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig
 USES+=		gettext gnome
 USE_GNOME=	glib20 gtk40 cairo pango
 CMAKE_ARGS+=	-DUSE_GTK4=on
+LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig
 .elif ${FLAVOR:U} == qt5
 USES+=		qt:5
 USE_QT=		core gui widgets buildtools:build qmake:build
